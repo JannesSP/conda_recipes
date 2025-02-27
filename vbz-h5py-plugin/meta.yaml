@@ -6,19 +6,13 @@ package:
   version: {{ version }}
 
 build:
+  noarch: python
   number: 0
   script:
     - export LD_LIBRARY_PATH=${PREFIX}/lib:${LD_LIBRARY_PATH}
-    - pip install https://files.pythonhosted.org/packages/d2/dd/eab7a9cac698afd8d4d469d703303390a88570ace01da358088459a6a48d/vbz_h5py_plugin-1.0.1-py3-none-any.whl
+    - $PYTHON -m pip install --prefix=${PREFIX} https://pypi.io/packages/py3/{{ name[0] }}/{{ name}}/vbz_h5py_plugin-{{ version }}-py3-none-any.whl
 
 requirements:
-  build:
-    - python
-    - pip
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - libstdcxx-ng  # Ensure correct C++ standard library
-    - libgcc-ng      # Ensure GCC runtime
   host:
     - python
     - pip
@@ -26,8 +20,12 @@ requirements:
   run:
     - python
     - h5py
-    - libgcc-ng      # Ensure runtime access to libgcc
-    - libstdcxx-ng   # Ensure runtime access to libstdc++
+
+test:
+  imports:
+    - vbz_h5py_plugin
+  commands:
+    - python -c "import vbz_h5py_plugin"
 
 about:
   home: https://github.com/nanoporetech/vbz-h5py-plugin
