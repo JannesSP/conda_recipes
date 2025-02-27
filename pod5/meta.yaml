@@ -14,7 +14,7 @@ build:
   entry_points:
     - pod5 = pod5.tools.main:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1 # TODO reset to 0 for new version
 
 requirements:
   host:
@@ -31,14 +31,14 @@ requirements:
     - numpy >=1.21.0 # [py<=312]
     - numpy >=2.1.1 # [py>312]
     - typing-extensions  # [py<310]
-    - pyarrow >=18.0.0 # [py>38]
+    - pyarrow ~=18.0.0 # [py>38]
     - pyarrow ~=16.1.0 # [py<=38]
     - pytz
     - packaging
-    - polars >=0.17.12
-    - h5py >=3.11.0 # [py>38]
+    - polars ~=0.19
+    - h5py ~=3.11.0 # [py>38]
     - h5py ~=3.10.0 # [py<=38]
-    - ont_vbz_hdf_plugin
+    - vbz-h5py-plugin
     - tqdm
 
 test:
