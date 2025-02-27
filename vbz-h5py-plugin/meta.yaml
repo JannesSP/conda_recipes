@@ -1,0 +1,37 @@
+{% set version = "1.0.1" %}
+{% set name = "vbz-h5py-plugin" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+build:
+  number: 0
+  script:
+    - export LD_LIBRARY_PATH=${PREFIX}/lib:${LD_LIBRARY_PATH}
+    - pip install https://files.pythonhosted.org/packages/d2/dd/eab7a9cac698afd8d4d469d703303390a88570ace01da358088459a6a48d/vbz_h5py_plugin-1.0.1-py3-none-any.whl
+
+requirements:
+  build:
+    - python
+    - pip
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - libstdcxx-ng  # Ensure correct C++ standard library
+    - libgcc-ng      # Ensure GCC runtime
+  host:
+    - python
+    - pip
+    - h5py
+  run:
+    - python
+    - h5py
+    - libgcc-ng      # Ensure runtime access to libgcc
+    - libstdcxx-ng   # Ensure runtime access to libstdc++
+
+about:
+  home: https://github.com/nanoporetech/vbz-h5py-plugin
+  license: Mozilla Public License Version 2.0
+  summary: 'This module provides a plugin to H5Py for the VBZ (de)compression library.'
+  description: |
+    VBZ compression is a compression algorithm developed by Oxford Nanopore to reduce file size and improve read/write performance when handling raw data in POD5/Fast5 files. Previously, the default compression was GZIP and comparing to GZIP we see a compression improvement of >30% and a CPU performance improvement of >10X for compression and >5X for decompression. Further details of the implementation and benchmarks can be found here: ![Nanoporetech/vbz_compression](https://github.com/nanoporetech/vbz_compression)
