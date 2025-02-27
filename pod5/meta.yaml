@@ -31,12 +31,13 @@ requirements:
     - numpy >=1.21.0 # [py<=312]
     - numpy >=2.1.1 # [py>312]
     - typing-extensions  # [py<310]
-    - pyarrow ~=18.0.0 # [py>38]
+    - pyarrow >=18.0.0 # [py>38]
     - pyarrow ~=16.1.0 # [py<=38]
     - pytz
     - packaging
-    - polars ~=0.19
-    - h5py ~=3.11.0 # [py>38]
+    - polars ~=0.19 # [py<313]
+    - polars ~=1.20 # [py>=313]
+    - h5py >=3.11.0 # [py>38]
     - h5py ~=3.10.0 # [py<=38]
     - vbz-h5py-plugin
     - tqdm
