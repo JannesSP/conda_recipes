@@ -7,3 +7,9 @@ conda mambabuild <recipe_folder>
 conda convert --platform osx-64 </path/to/package.tar.bz2> -o <outputdir/>
 anaconda upload <converted_package>
 ```
+
+# Recipes:
+
+- pod5: https://anaconda.org/jannessp/pod5/badges/version.svg
+- lib-pod5: https://anaconda.org/jannessp/lib-pod5/badges/version.svg
+- vbz-h5py-plugin: https://anaconda.org/jannessp/vbz-h5py-plugin/badges/version.svg
