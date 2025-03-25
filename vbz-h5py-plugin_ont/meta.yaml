@@ -1,5 +1,5 @@
 {% set name = "vbz-h5py-plugin" %}
-{% set version = "1.0.12" %}
+{% set version = "1.0.13" %}
 
 package:
   name: {{name}}
@@ -43,7 +43,7 @@ test:
     - test_data/multi_fast5_vbz_v1.fast5
 
 about:
-  home: https://github.com/nanoporetech
+  home: https://github.com/nanoporetech/vbz_compression.git
   license: MPL-2
   license_file: LICENCE.txt
   license_family: MOZILLA
