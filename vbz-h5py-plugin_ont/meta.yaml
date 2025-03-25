@@ -18,6 +18,7 @@ extra:
   additional-platforms:
     - linux-aarch64
     - osx-arm64
+    - osx-64
   skip-lints:
     # This needs git for recursive checkouts
     - uses_vcs_url
