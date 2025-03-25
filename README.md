@@ -4,6 +4,9 @@ Conda recipes I created for other tools.
 # Command to build conda package
 ```bash
 conda mambabuild <recipe_folder>
+# CONDA_SUBDIR=osx-64 conda mambabuild <recipe_folder>
+# CONDA_SUBDIR=linux-aarch64 conda mambabuild <recipe_folder>
+# CONDA_SUBDIR=osx-arm64 conda mambabuild <recipe_folder>
 conda convert --platform osx-64 </path/to/package.tar.bz2> -o <outputdir/>
 anaconda upload <converted_package>
 ```
