@@ -14,7 +14,7 @@ build:
   entry_points:
     - pod5 = pod5.tools.main:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -33,6 +33,7 @@ requirements:
     - typing-extensions  # [py<310]
     - pyarrow >=18.0.0 # [py>38]
     - pyarrow >=16.1.0 # [py<=38]
+    - libprotobuf
     - pytz
     - packaging
     - polars >=0.19 # [py<313]
