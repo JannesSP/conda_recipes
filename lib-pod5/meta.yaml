@@ -1,4 +1,4 @@
-{% set version = "0.3.23" %}
+{% set version = "0.3.28" %}
 {% set name = "lib-pod5" %}
 
 package:
@@ -8,12 +8,12 @@ package:
 build:
   number: 0
   # script: pip install https://files.pythonhosted.org/packages/cp38/l/lib-pod5/lib_pod5-{{ version }}-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl [py==38]
-  script: pip install https://files.pythonhosted.org/packages/cp38/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl [py==38]
-  script: pip install https://files.pythonhosted.org/packages/cp39/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl [py==39]
-  script: pip install https://files.pythonhosted.org/packages/cp310/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl [py==310]
-  script: pip install https://files.pythonhosted.org/packages/cp311/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl [py==311]
-  script: pip install https://files.pythonhosted.org/packages/cp312/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl [py==312]
-  script: pip install https://files.pythonhosted.org/packages/cp313/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl [py==313]
+  # script: pip install https://files.pythonhosted.org/packages/cp38/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl [py==38]
+  script: pip install https://files.pythonhosted.org/packages/cp39/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl [py==39]
+  script: pip install https://files.pythonhosted.org/packages/cp310/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl [py==310]
+  script: pip install https://files.pythonhosted.org/packages/cp311/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl [py==311]
+  script: pip install https://files.pythonhosted.org/packages/cp312/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl [py==312]
+  script: pip install https://files.pythonhosted.org/packages/cp313/{{ name[0] }}/{{ name }}/lib_pod5-{{ version }}-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl [py==313]
 
 requirements:
   host:
